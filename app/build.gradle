@@ -1,0 +1,25 @@
+plugins {
+    id 'com.android.application'
+    id 'org.jetbrains.kotlin.android'
+}
+
+apply from: '../gradle/settings-core.gradle'
+
+apply from: '../gradle/dependencies.gradle'
+
+android {
+    namespace 'com.example.multiversionsdk'
+
+    defaultConfig {
+        applicationId "com.example.multiversionsdk"
+        minSdk 23
+        targetSdk 34
+        versionCode 1
+        versionName "1.0"
+    }
+
+    dependencies {
+        implementation project(':new')
+        implementation project(':old')
+    }
+}

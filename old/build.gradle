@@ -1,0 +1,14 @@
+plugins {
+    id 'com.android.library'
+    id 'org.jetbrains.kotlin.android'
+}
+
+apply from: '../gradle/settings-core.gradle'
+
+android {
+    namespace 'com.example.old'
+}
+
+dependencies {
+    implementation 'io.adjoe:adjoe-sdk-android:2.0.7'
+}
